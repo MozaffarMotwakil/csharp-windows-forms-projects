@@ -60,11 +60,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblEndTotalPrice = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.nudQuantity = new System.Windows.Forms.NumericUpDown();
+            this.gbQuantity = new System.Windows.Forms.GroupBox();
             this.gbSize.SuspendLayout();
             this.gbCrustType.SuspendLayout();
             this.gbToppings.SuspendLayout();
             this.gbEatPlace.SuspendLayout();
             this.gbOrderSummary.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
+            this.gbQuantity.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblHeader
@@ -484,6 +488,38 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Size:";
             // 
+            // nudQuantity
+            // 
+            this.nudQuantity.Font = new System.Drawing.Font("Tahoma", 18F);
+            this.nudQuantity.Location = new System.Drawing.Point(7, 26);
+            this.nudQuantity.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudQuantity.Name = "nudQuantity";
+            this.nudQuantity.Size = new System.Drawing.Size(92, 36);
+            this.nudQuantity.TabIndex = 4;
+            this.nudQuantity.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudQuantity.ValueChanged += new System.EventHandler(this.nudQuantity_ValueChanged);
+            // 
+            // gbQuantity
+            // 
+            this.gbQuantity.BackColor = System.Drawing.Color.Transparent;
+            this.gbQuantity.Controls.Add(this.nudQuantity);
+            this.gbQuantity.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbQuantity.ForeColor = System.Drawing.Color.Red;
+            this.gbQuantity.Location = new System.Drawing.Point(517, 196);
+            this.gbQuantity.Name = "gbQuantity";
+            this.gbQuantity.Size = new System.Drawing.Size(193, 72);
+            this.gbQuantity.TabIndex = 5;
+            this.gbQuantity.TabStop = false;
+            this.gbQuantity.Text = "Quantity";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -491,6 +527,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(923, 450);
+            this.Controls.Add(this.gbQuantity);
             this.Controls.Add(this.gbOrderSummary);
             this.Controls.Add(this.btnResetForm);
             this.Controls.Add(this.btnOrderPizza);
@@ -513,6 +550,8 @@
             this.gbEatPlace.PerformLayout();
             this.gbOrderSummary.ResumeLayout(false);
             this.gbOrderSummary.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
+            this.gbQuantity.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -551,6 +590,8 @@
         private System.Windows.Forms.Label lblEndEatPlace;
         private System.Windows.Forms.Label lblEndTotalPrice;
         private System.Windows.Forms.Label lblEndToppings;
+        private System.Windows.Forms.NumericUpDown nudQuantity;
+        private System.Windows.Forms.GroupBox gbQuantity;
     }
 }
 

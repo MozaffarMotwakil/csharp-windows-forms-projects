@@ -96,7 +96,7 @@ namespace PizzaOrder
 
         private float CalculateTotalPrice()
         {
-            return GetSelectedSizePrice() + GetSelectedCrustPrice() + CalculateToppingsPrice();
+            return (GetSelectedSizePrice() + GetSelectedCrustPrice() + CalculateToppingsPrice()) * (float)nudQuantity.Value;
         }
 
         private void UpdateTotalPrice()
@@ -324,5 +324,11 @@ namespace PizzaOrder
         {
             ResetForm();
         }
+
+        private void nudQuantity_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateTotalPrice();
+        }
+
     }
 }
