@@ -1,6 +1,6 @@
 ﻿namespace RandomGenerator
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -241,7 +241,7 @@
             this.txtResult.TabIndex = 7;
             this.txtResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Form1
+            // frmMain
             // 
             this.AcceptButton = this.btnGenerate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,8 +255,8 @@
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnGenerate);
             this.Controls.Add(this.gbDetails);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "frmMain";
+            this.Text = "Random Generator";
             this.gbDetails.ResumeLayout(false);
             this.gbDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDigitsCount)).EndInit();
